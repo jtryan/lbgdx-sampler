@@ -13,10 +13,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Logger;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.sampler.utils.GdxUtils;
 
 public class InputPollingSample implements ApplicationListener {
 
-	private static final Logger log = new Logger(GdxModuleInfoSample.class.getName(), Logger.DEBUG);
+	private static final Logger log = new Logger(InputPollingSample.class.getName(), Logger.DEBUG);
 
 	private OrthographicCamera camera;
 	private Viewport viewport;
@@ -38,14 +39,11 @@ public class InputPollingSample implements ApplicationListener {
 	@Override
 	public void resize(int width, int height) {
 		viewport.update(width, height, true);
-
 	}
 
 	@Override
 	public void render() {
-		// clear screen
-		Gdx.gl.glClearColor(0, 0,0, 1.0f);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		GdxUtils.clearScreen();
 
 		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
