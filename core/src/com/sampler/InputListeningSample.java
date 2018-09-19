@@ -37,55 +37,55 @@ public class InputListeningSample implements ApplicationListener, InputProcessor
         batch = new SpriteBatch();
         font = new BitmapFont(Gdx.files.internal("fonts/oswald-32.fnt"));
 
-        InputMultiplexer multiplexer = new InputMultiplexer();
+//        InputMultiplexer multiplexer = new InputMultiplexer();
+//
+//        InputAdapter firstProcessor = new InputAdapter() {
+//            @Override
+//            public boolean keyDown(int keycode) {
+//                log.debug("first - keyDown keyCode= " + keycode);
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean keyUp(int keycode) {
+//                log.debug("first - keyUp keyCode= " + keycode);
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean keyTyped(char character) {
+//                log.debug("first - keyTyped character= " + character);
+//                return false;
+//            }
+//        };
+//
+//        InputAdapter secondProcessor = new InputAdapter() {
+//            @Override
+//            public boolean keyDown(int keycode) {
+//                log.debug("second - keyDown keyCode= " + keycode);
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean keyUp(int keycode) {
+//                log.debug("second - keyUp keyCode= " + keycode);
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean keyTyped(char character) {
+//                log.debug("second - keyTyped character= " + character);
+//                return false;
+//            }
+//        };
 
-        InputAdapter firstProcessor = new InputAdapter() {
-            @Override
-            public boolean keyDown(int keycode) {
-                log.debug("first - keyDown keyCode= " + keycode);
-                return true;
-            }
-
-            @Override
-            public boolean keyUp(int keycode) {
-                log.debug("first - keyUp keyCode= " + keycode);
-                return false;
-            }
-
-            @Override
-            public boolean keyTyped(char character) {
-                log.debug("first - keyTyped character= " + character);
-                return false;
-            }
-        };
-
-        InputAdapter secondProcessor = new InputAdapter() {
-            @Override
-            public boolean keyDown(int keycode) {
-                log.debug("second - keyDown keyCode= " + keycode);
-                return true;
-            }
-
-            @Override
-            public boolean keyUp(int keycode) {
-                log.debug("second - keyUp keyCode= " + keycode);
-                return true;
-            }
-
-            @Override
-            public boolean keyTyped(char character) {
-                log.debug("second - keyTyped character= " + character);
-                return false;
-            }
-        };
-
-        multiplexer.addProcessor(firstProcessor);
-        multiplexer.addProcessor(secondProcessor);
-
-        Gdx.input.setInputProcessor(multiplexer);
+//        multiplexer.addProcessor(firstProcessor);
+//        multiplexer.addProcessor(secondProcessor);
+//
+//        Gdx.input.setInputProcessor(multiplexer);
 
 
-        // Gdx.input.setInputProcessor(this);
+        Gdx.input.setInputProcessor(this);
     }
 
     @Override
