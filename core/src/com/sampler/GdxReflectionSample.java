@@ -1,7 +1,6 @@
 package com.sampler;
 
 import com.badlogic.gdx.Application;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
@@ -14,12 +13,15 @@ import com.badlogic.gdx.utils.reflect.Field;
 import com.badlogic.gdx.utils.reflect.Method;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.sampler.common.SampleBase;
+import com.sampler.common.SampleInfo;
 
 import java.util.Arrays;
 
-public class GdxReflectionSample implements ApplicationListener {
-
+public class GdxReflectionSample extends SampleBase {
     private static final Logger log = new Logger(GdxReflectionSample.class.getName(), Logger.DEBUG);
+
+    public static final SampleInfo SAMPLE_INFO = new SampleInfo(GdxReflectionSample.class);
 
     private OrthographicCamera camera;
     private Viewport viewport;
