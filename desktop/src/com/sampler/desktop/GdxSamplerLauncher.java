@@ -32,11 +32,11 @@ import javax.swing.WindowConstants;
 
 public class GdxSamplerLauncher extends JFrame {
 
-    private static final int WIDTH = 2560; //1280
-    private static final int HEIGHT = 1440; //720
+    private static final int WIDTH = 1280; //1280
+    private static final int HEIGHT = 720; //720
     private static final int CELL_WIDTH = 400; //200
     private static final int CANVAS_WIDTH = WIDTH - CELL_WIDTH;
-    private static final Font LIST_FONT = new Font("Times New Roman", Font.BOLD, 24);
+    // private static final Font LIST_FONT = new Font("Times New Roman", Font.BOLD, 24);
 
     // AWT = Abstract Window Toolkit
     private LwjglAWTCanvas lwjglAWTCanvas;
@@ -87,7 +87,7 @@ public class GdxSamplerLauncher extends JFrame {
 
         sampleList = new JList(SampleInfos.getSampleNames().toArray());
 
-        sampleList.setFont(LIST_FONT);
+//        sampleList.setFont(LIST_FONT);
         sampleList.setFixedCellWidth(CELL_WIDTH);
         sampleList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         sampleList.addMouseListener(new MouseAdapter() {
@@ -109,7 +109,7 @@ public class GdxSamplerLauncher extends JFrame {
         c.weighty = 0;
 
         JButton launchButton = new JButton(("Launch Sample"));
-        launchButton.setFont(LIST_FONT);
+//        launchButton.setFont(LIST_FONT);
         launchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
